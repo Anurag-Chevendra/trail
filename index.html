@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not AI</title>
+<title>Package Watch &mdash; Malware Analysis Feed</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
     --sans:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;
     --display:'Bricolage Grotesque',system-ui,sans-serif;
   }
-  /* Paper -- light theme */
   body[data-theme="paper"]{
     --bg:#f6f7f9; --panel:#ffffff; --panel-2:#f1f3f6;
     --line:#e3e7ec; --hover-line:#c3ccd8;
@@ -136,7 +135,7 @@
 <body>
 
 <header>
-  <h1>Trail</h1>
+  <h1>Package Watch</h1>
   <span class="last-updated" id="lastUpdated"></span>
   <div class="themes" id="themes">
     <span class="label">Theme</span>
@@ -164,8 +163,8 @@
 <script>
 /* -------------------------------------------------------------
    STATIC MODE — GitHub Pages
-   Fetches packages.json (pushed by Pi) instead of a live server.
-   Re-fetches every 5 minutes to pick up new pushes.
+   Fetches manifest.json to get the list of data files, then
+   fetches each individual JSON file from data/.
 --------------------------------------------------------------*/
 
 let packages = [];
@@ -220,38 +219,48 @@ function findingsFor(p){
 
 function detailRows(p){
   const verdict = normVerdict(p.overall_verdict);
-  let html = `<div class="kv"><div class="kv-label">Overall verdict</div>` +
-             `<div><span class="kv-val">${verdict}</span></div></div>`;
+  let html = '<div class="kv"><div class="kv-label">Overall verdict</div>' +
+             '<div><span class="kv-val">' + verdict + '</span></div></div>';
   for (const section of findingsFor(p)){
     for (const row of section.rows){
       const chips = row.items.map(x =>
-        `<span class="flag${section.warn ? " warn" : ""}">${escapeHtml(fmtItem(x))}</span>`).join(" ");
-      html += `<div class="kv"><div class="kv-label">${escapeHtml(row.label)}</div><div>${chips}</div></div>`;
+        '<span class="flag' + (section.warn ? " warn" : "") + '">' + escapeHtml(fmtItem(x)) + '</span>').join(" ");
+      html += '<div class="kv"><div class="kv-label">' + escapeHtml(row.label) + '</div><div>' + chips + '</div></div>';
     }
   }
   return html;
 }
 
-/* -- STATIC MODE ----------------------------------------------
-   Fetches packages.json from the same directory (relative URL).
-   Cache-busts with a timestamp query param so GitHub Pages CDN
-   serves the latest version after a push.
---------------------------------------------------------------*/
+/* -- STATIC MODE: fetch manifest, then each file ------------ */
 
 async function fetchPackages(){
   try {
-    const r = await fetch("packages.json?t=" + Date.now(), { cache: "no-store" });
+    const r = await fetch("manifest.json?t=" + Date.now(), { cache: "no-store" });
     if (!r.ok) throw new Error("HTTP " + r.status);
-    packages = await r.json();
+    const fileList = await r.json();
+
+    const results = await Promise.allSettled(
+      fileList.map(f =>
+        fetch("data/" + f + "?t=" + Date.now(), { cache: "no-store" })
+          .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
+      )
+    );
+
+    packages = results
+      .filter(r => r.status === "fulfilled")
+      .map(r => r.value)
+      .flat()                              // handle files that are arrays
+      .filter(r => r && typeof r === "object" && !Array.isArray(r));
+
     document.getElementById("lastUpdated").textContent =
       "Updated " + new Date().toLocaleTimeString();
     render();
   } catch (e) {
-    console.error("Failed to fetch packages.json:", e);
+    console.error("Failed to fetch data:", e);
     if (packages.length === 0) {
       document.getElementById("empty").hidden = false;
       document.getElementById("empty").textContent =
-        "Could not load packages.json — waiting for data…";
+        "Could not load data — waiting for results…";
     }
   }
 }
@@ -309,22 +318,21 @@ function render(){
     const card = document.createElement("div");
     card.className = "card v-" + v;
     const flags = flagsFor(p).map(f =>
-      `<span class="flag${f.warn ? " warn" : ""}">${f.t}</span>`).join("");
-    card.innerHTML = `
-      <div class="row">
-        <span class="eco">${p.ecosystem || "NPM"}</span>
-        <span class="verdict">${v}</span>
-      </div>
-      <div class="pkg">${escapeHtml(p.package || "(unknown package)")}</div>
-      ${p.registry_version ? `<div class="ver">v${escapeHtml(String(p.registry_version))}</div>` : ""}
-      ${flags ? `<div class="flags">${flags}</div>` : ""}
-      <div class="meta">
-        <span>Analyzed ${timeAgo(p.analyzed_at)}</span>
-        <span>&#9656; details</span>
-      </div>
-      <div class="detail"><div class="kv-wrap">${detailRows(p)}</div></div>
-    `;
-    card.addEventListener("click", () => card.classList.toggle("open"));
+      '<span class="flag' + (f.warn ? " warn" : "") + '">' + f.t + '</span>').join("");
+    card.innerHTML =
+      '<div class="row">' +
+        '<span class="eco">' + (p.ecosystem || "NPM") + '</span>' +
+        '<span class="verdict">' + v + '</span>' +
+      '</div>' +
+      '<div class="pkg">' + escapeHtml(p.package || "(unknown package)") + '</div>' +
+      (p.registry_version ? '<div class="ver">v' + escapeHtml(String(p.registry_version)) + '</div>' : "") +
+      (flags ? '<div class="flags">' + flags + '</div>' : "") +
+      '<div class="meta">' +
+        '<span>Analyzed ' + timeAgo(p.analyzed_at) + '</span>' +
+        '<span>&#9656; details</span>' +
+      '</div>' +
+      '<div class="detail"><div class="kv-wrap">' + detailRows(p) + '</div></div>';
+    card.addEventListener("click", function(){ this.classList.toggle("open"); });
     grid.appendChild(card);
   }
 }
@@ -333,21 +341,21 @@ function escapeHtml(s){
   return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
-document.getElementById("themes").addEventListener("click", e => {
-  const s = e.target.closest(".swatch"); if (!s) return;
-  document.querySelectorAll(".swatch").forEach(x => x.classList.remove("active"));
+document.getElementById("themes").addEventListener("click", function(e){
+  var s = e.target.closest(".swatch"); if (!s) return;
+  document.querySelectorAll(".swatch").forEach(function(x){ x.classList.remove("active"); });
   s.classList.add("active");
-  const t = s.dataset.t;
+  var t = s.dataset.t;
   if (t === "graphite") document.body.removeAttribute("data-theme");
   else document.body.setAttribute("data-theme", t);
 });
 
-document.getElementById("q").addEventListener("input", e => {
+document.getElementById("q").addEventListener("input", function(e){
   query = e.target.value; render();
 });
-document.getElementById("filters").addEventListener("click", e => {
-  const btn = e.target.closest(".chip"); if (!btn) return;
-  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+document.getElementById("filters").addEventListener("click", function(e){
+  var btn = e.target.closest(".chip"); if (!btn) return;
+  document.querySelectorAll(".chip").forEach(function(c){ c.classList.remove("active"); });
   btn.classList.add("active");
   verdictFilter = btn.dataset.v; render();
 });

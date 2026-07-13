@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
+"""
+push-watcher.py — Watches the results folder for new .json files,
+copies them into the repo's data/ folder, updates manifest.json,
+pushes to GitHub, and deletes the source files.
+"""
+
 import argparse
 import json
+import shutil
 import subprocess
 import time
 import sys
@@ -10,7 +17,7 @@ from datetime import datetime
 RESULTS_DIR = Path("/home/feet/Desktop/checker/results")
 REPO_DIR = Path("/home/feet/Desktop/www/trail")
 POLL_INTERVAL = 15
-PACKAGES_FILE = "packages.json"
+DATA_DIR = "data"
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
@@ -20,37 +27,18 @@ def git(repo, *args):
         ["git", *args], cwd=repo, capture_output=True, text=True, timeout=60
     )
 
-def load_packages(repo):
-    pkg_file = repo / PACKAGES_FILE
-    if not pkg_file.exists():
+def build_manifest(repo):
+    """Generate manifest.json from all .json files in data/."""
+    data_path = repo / DATA_DIR
+    if not data_path.exists():
         return []
-    try:
-        data = json.loads(pkg_file.read_text())
-        if isinstance(data, list):
-            return [r for r in data if isinstance(r, dict)]
-        return []
-    except (json.JSONDecodeError, OSError):
-        log(f"WARNING: corrupt {PACKAGES_FILE}, starting fresh")
-        return []
+    files = sorted(f.name for f in data_path.glob("*.json"))
+    manifest_path = repo / "manifest.json"
+    manifest_path.write_text(json.dumps(files))
+    return files
 
-def upsert(packages, record):
-    key = (record.get("package", ""), record.get("registry_version", ""))
-    for i, p in enumerate(packages):
-        if (p.get("package", ""), p.get("registry_version", "")) == key:
-            packages[i] = record
-            return packages
-    packages.append(record)
-    return packages
-
-def save_packages(repo, packages):
-    (repo / PACKAGES_FILE).write_text(json.dumps(packages))
-
-def push(repo, names):
-    git(repo, "add", PACKAGES_FILE)
-    label = ", ".join(names[:5])
-    if len(names) > 5:
-        label += f" +{len(names) - 5} more"
-    msg = f"add {label}"
+def push(repo, msg):
+    git(repo, "add", "-A")
 
     result = git(repo, "commit", "-m", msg)
     if result.returncode != 0:
@@ -71,39 +59,37 @@ def process_batch(results_dir, repo):
     if not json_files:
         return
 
-    packages = load_packages(repo)
-    processed = []
+    data_path = repo / DATA_DIR
+    data_path.mkdir(exist_ok=True)
+
+    copied = []
 
     for f in json_files:
+        # Validate it's proper JSON before copying
         try:
-            record = json.loads(f.read_text())
+            json.loads(f.read_text())
         except json.JSONDecodeError:
             log(f"Skipping (bad JSON, will retry): {f.name}")
             continue
 
-        # Handle both single objects and arrays of objects
-        if isinstance(record, list):
-            for item in record:
-                if isinstance(item, dict):
-                    packages = upsert(packages, item)
-            processed.append(f)
-            log(f"Merged: {f.name} ({len(record)} records)")
-        elif isinstance(record, dict):
-            packages = upsert(packages, record)
-            processed.append(f)
-            log(f"Merged: {f.name} ({record.get('package', '?')})")
-        else:
-            log(f"Skipping (not a dict or list): {f.name}")
-            continue
+        dest = data_path / f.name
+        shutil.copy2(f, dest)
+        copied.append(f)
+        log(f"Copied: {f.name}")
 
-    if not processed:
+    if not copied:
         return
 
-    save_packages(repo, packages)
-    names = [f.name for f in processed]
-    push(repo, names)
+    manifest = build_manifest(repo)
+    log(f"Manifest: {len(manifest)} files")
 
-    for f in processed:
+    label = ", ".join(f.name for f in copied[:5])
+    if len(copied) > 5:
+        label += f" +{len(copied) - 5} more"
+    push(repo, f"add {label}")
+
+    # Only delete after successful push
+    for f in copied:
         f.unlink()
         log(f"Deleted: {f.name}")
 
@@ -123,7 +109,7 @@ def main():
     log(f"Repo:     {args.repo}")
     log(f"Interval: {args.interval}s")
 
-    git(args.repo, "pull", "--ff-only")
+    git(args.repo, "pull", "--rebase")
 
     while True:
         try:
