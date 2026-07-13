@@ -18,6 +18,7 @@
     --muted:#8b96a5;
     --review:#ff4d4d;
     --clean:#4cd6a4;
+    --inconclusive:#e8a32e;
     --accent:#6ea8fe;
     --mono:'JetBrains Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
     --sans:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;
@@ -28,6 +29,7 @@
     --line:#e3e7ec; --hover-line:#c3ccd8;
     --text:#1d2430; --muted:#69758a;
     --review:#d92d3f; --clean:#0f9d6c;
+    --inconclusive:#c4850a;
     --accent:#2563eb;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -81,6 +83,7 @@
   .chip.active{color:var(--text);border-color:currentColor}
   .chip.active[data-v="REVIEW"]{color:var(--review)}
   .chip.active[data-v="CLEAN"]{color:var(--clean)}
+  .chip.active[data-v="INCONCLUSIVE"]{color:var(--inconclusive)}
   .count{padding:8px 32px 0;color:var(--muted);font-size:13px;text-align:center}
 
   .grid{
@@ -104,6 +107,7 @@
   }
   .v-REVIEW .verdict{color:var(--review);border-color:var(--review);background:rgba(255,180,84,.08)}
   .v-CLEAN .verdict{color:var(--clean);border-color:var(--clean);background:rgba(76,214,164,.08)}
+  .v-INCONCLUSIVE .verdict{color:var(--inconclusive);border-color:var(--inconclusive);background:rgba(232,163,46,.1)}
 
   .pkg{font-family:var(--mono);font-size:16px;font-weight:600;margin:10px 0 2px;word-break:break-all}
   .ver{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
@@ -152,6 +156,7 @@
   <div class="filters" id="filters">
     <button class="chip active" data-v="ALL">All</button>
     <button class="chip" data-v="REVIEW">Review</button>
+    <button class="chip" data-v="INCONCLUSIVE">Inconclusive</button>
     <button class="chip" data-v="CLEAN">Clean</button>
   </div>
 </div>
@@ -252,8 +257,12 @@ async function fetchPackages(){
       .flat()                              // handle files that are arrays
       .filter(r => r && typeof r === "object" && !Array.isArray(r));
 
+    const latest = packages.reduce((max, p) => {
+      const t = new Date(p.analyzed_at).getTime();
+      return t > max ? t : max;
+    }, 0);
     document.getElementById("lastUpdated").textContent =
-      "Updated " + new Date().toLocaleTimeString();
+      latest ? "Updated " + new Date(latest).toLocaleString() : "";
     render();
   } catch (e) {
     console.error("Failed to fetch data:", e);
@@ -286,7 +295,10 @@ function timeAgo(iso){
 }
 
 function normVerdict(v){
-  return (v || "").toUpperCase() === "CLEAN" ? "CLEAN" : "REVIEW";
+  const upper = (v || "").toUpperCase();
+  if (upper === "CLEAN") return "CLEAN";
+  if (upper === "INCONCLUSIVE") return "INCONCLUSIVE";
+  return "REVIEW";
 }
 
 function flagsFor(p){
