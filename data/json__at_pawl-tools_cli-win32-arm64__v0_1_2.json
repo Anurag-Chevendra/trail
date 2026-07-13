@@ -1,7 +1,7 @@
 {
   "package": "@pawl-tools/cli-win32-arm64",
   "registry_version": "0.1.2",
-  "analyzed_at": "2026-07-13T19:44:03.343866+00:00",
+  "analyzed_at": "2026-07-13T20:14:22.004661+00:00",
   "status": "ok",
   "install_returncode": 1,
   "overall_verdict": "CLEAN",
@@ -11,19 +11,11 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.6.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.7.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -31,23 +23,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.3.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -55,15 +31,39 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
-        "ip": "104.16.6.34",
+        "ip": "104.16.8.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "17",
         "from_package": false
       },
       {
@@ -71,31 +71,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.9.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -103,19 +79,35 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
+        "pid": "17",
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -182,5 +174,5 @@
     ],
     "verdict": "clean"
   },
-  "install_stderr_tail": "npm error code EBADPLATFORM\nnpm error notsup Unsupported platform for @pawl-tools/cli-win32-arm64@0.1.2: wanted {\"os\":\"win32\",\"cpu\":\"arm64\"} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})\nnpm error notsup Valid os:   win32\nnpm error notsup Actual os:  linux\nnpm error notsup Valid cpu:  arm64\nnpm error notsup Actual cpu: x64\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\nnpm error A complete log of this run can be found in: /root/.npm/_logs/2026-07-13T19_43_54_594Z-debug-0.log\n"
+  "install_stderr_tail": "npm error code EBADPLATFORM\nnpm error notsup Unsupported platform for @pawl-tools/cli-win32-arm64@0.1.2: wanted {\"os\":\"win32\",\"cpu\":\"arm64\"} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})\nnpm error notsup Valid os:   win32\nnpm error notsup Actual os:  linux\nnpm error notsup Valid cpu:  arm64\nnpm error notsup Actual cpu: x64\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\nnpm error A complete log of this run can be found in: /root/.npm/_logs/2026-07-13T20_14_11_364Z-debug-0.log\n"
 }
