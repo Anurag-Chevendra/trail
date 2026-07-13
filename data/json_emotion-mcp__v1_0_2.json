@@ -1,7 +1,7 @@
 {
   "package": "emotion-mcp",
   "registry_version": "1.0.2",
-  "analyzed_at": "2026-07-13T10:53:31.022571+00:00",
+  "analyzed_at": "2026-07-13T11:23:12.977341+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -10,83 +10,11 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.8.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
         "ip": "104.16.10.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.7.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.11.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.3.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.2.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.1.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.6.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "30",
+        "pid": "29",
         "from_package": false
       },
       {
@@ -94,7 +22,47 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "30",
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
         "from_package": false
       },
       {
@@ -102,11 +70,43 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "30",
+        "pid": "29",
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "29",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -114,15 +114,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "20",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -146,7 +138,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -154,7 +146,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -162,7 +154,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -170,7 +162,143 @@
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
