@@ -1,0 +1,444 @@
+{
+  "package": "overtree",
+  "registry_version": "0.1.1",
+  "analyzed_at": "2026-07-13T16:53:42.599772+00:00",
+  "status": "timeout",
+  "install_returncode": -1,
+  "overall_verdict": "REVIEW",
+  "analysis_complete": false,
+  "network": {
+    "attribution": "pid_subtree",
+    "package_connections": [],
+    "all_public_connections": [
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      }
+    ],
+    "dns_lookups_all": [
+      "registry.npmjs.org"
+    ],
+    "dns_lookups_non_npm": [],
+    "npm_hostnames_seen": [
+      "registry.npmjs.org"
+    ],
+    "exfil_services_contacted": [],
+    "verdict": "clean"
+  },
+  "canaries": {
+    "attribution": "pid_subtree",
+    "canary_tokens_leaked": [],
+    "canary_token_count": 0,
+    "sensitive_file_access": [
+      {
+        "path": "/test/.npmrc",
+        "found": false,
+        "error": "ENOENT",
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/root/.npmrc",
+        "found": true,
+        "error": null,
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/test/.env",
+        "found": false,
+        "error": "ENOENT",
+        "read_by": "package",
+        "benign_npm_read": false
+      },
+      {
+        "path": "/test/.aginti/.env",
+        "found": false,
+        "error": "ENOENT",
+        "read_by": "package",
+        "benign_npm_read": false
+      },
+      {
+        "path": "/test/.aginti/.env",
+        "found": true,
+        "error": null,
+        "read_by": "package",
+        "benign_npm_read": false
+      }
+    ],
+    "accessed_by_package": [
+      "/test/.env",
+      "/test/.aginti/.env",
+      "/test/.aginti/.env"
+    ],
+    "probed_but_absent": [
+      "/test/.env",
+      "/test/.aginti/.env"
+    ],
+    "verdict": "review"
+  },
+  "filesystem": {
+    "attribution": "pid_subtree",
+    "package_files_read": [
+      "/etc/ld.so.cache",
+      "/etc/nsswitch.conf",
+      "/etc/os-release",
+      "/etc/resolv.conf",
+      "/root/.agintiflow/sessions",
+      "/test/.aginti-sessions",
+      "/test/.gitignore",
+      "/usr/local/bin/node"
+    ],
+    "package_files_written": [
+      "/root/.agintiflow/sessions/index.sqlite",
+      "/root/.agintiflow/sessions/index.sqlite-journal",
+      "/test/.aginti-sessions/web-state.sqlite",
+      "/test/.aginti-sessions/web-state.sqlite-journal",
+      "/test/.aginti/.env",
+      "/test/.gitignore"
+    ],
+    "tmp_snooped": [
+      "/root/.agintiflow/sessions"
+    ],
+    "recon_dir_scan": false,
+    "recon_dirs_enumerated": [],
+    "downloaded_artifacts": [],
+    "executed_by_package": [],
+    "all_reads": [
+      "/etc/gai.conf",
+      "/etc/host.conf",
+      "/etc/hosts",
+      "/etc/ld.so.cache",
+      "/etc/localtime",
+      "/etc/nsswitch.conf",
+      "/etc/os-release",
+      "/etc/resolv.conf",
+      "/root/.agintiflow/sessions",
+      "/root/.gitconfig",
+      "/root/.npmrc",
+      "/test/.aginti-sessions",
+      "/test/.gitignore",
+      "/test/package.json",
+      "/usr/bin/ldd",
+      "/usr/local/bin/node"
+    ],
+    "verdict": "review"
+  },
+  "install_stderr_tail": "TIMEOUT: install exceeded INSTALL_TIMEOUT"
+}
