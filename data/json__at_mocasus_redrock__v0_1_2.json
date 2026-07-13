@@ -1,7 +1,7 @@
 {
   "package": "@mocasus/redrock",
   "registry_version": "0.1.2",
-  "analyzed_at": "2026-07-13T14:40:50.627334+00:00",
+  "analyzed_at": "2026-07-13T19:37:11.144913+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -11,7 +11,7 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.10.34",
+        "ip": "104.16.5.34",
         "port": 0,
         "result": "0",
         "blocked": false,
@@ -27,9 +27,9 @@
         "from_package": false
       },
       {
-        "ip": "104.16.2.34",
+        "ip": "104.16.10.34",
         "port": 0,
-        "result": "0",
+        "result": "",
         "blocked": false,
         "pid": "17",
         "from_package": false
@@ -37,53 +37,13 @@
       {
         "ip": "104.16.3.34",
         "port": 0,
-        "result": "0",
+        "result": "",
         "blocked": false,
         "pid": "17",
         "from_package": false
       },
       {
-        "ip": "104.16.7.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.6.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.9.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.5.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.1.34",
+        "ip": "104.16.2.34",
         "port": 0,
         "result": "0",
         "blocked": false,
@@ -99,6 +59,22 @@
         "from_package": false
       },
       {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
         "ip": "104.16.4.34",
         "port": 0,
         "result": "0",
@@ -107,207 +83,399 @@
         "from_package": false
       },
       {
-        "ip": "104.16.10.34",
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
         "port": 443,
-        "result": "-1 EINPROGRESS",
+        "result": "",
         "blocked": false,
         "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
         "from_package": false
       },
       {
         "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
-        "blocked": false,
-        "pid": "8",
+        "pid": "15",
         "from_package": false
       },
       {
         "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
