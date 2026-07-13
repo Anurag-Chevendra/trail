@@ -1,7 +1,7 @@
 {
   "package": "@caodangdung/antigravity-workflows",
   "registry_version": "1.0.0",
-  "analyzed_at": "2026-07-13T14:41:37.561930+00:00",
+  "analyzed_at": "2026-07-13T19:38:05.453262+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -11,35 +11,11 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.3.34",
+        "ip": "104.16.4.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
+        "pid": "18",
         "from_package": false
       },
       {
@@ -47,15 +23,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
+        "pid": "18",
         "from_package": false
       },
       {
@@ -63,7 +31,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
+        "pid": "18",
         "from_package": false
       },
       {
@@ -71,23 +39,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.5.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.9.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "17",
+        "pid": "18",
         "from_package": false
       },
       {
@@ -95,7 +47,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
+        "pid": "18",
         "from_package": false
       },
       {
@@ -103,11 +55,59 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "17",
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
         "from_package": false
       },
       {
         "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "18",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -115,7 +115,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.3.34",
+        "ip": "104.16.4.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
