@@ -1,7 +1,7 @@
 {
   "package": "@pawl-tools/cli",
   "registry_version": "0.1.2",
-  "analyzed_at": "2026-07-13T14:48:11.329560+00:00",
+  "analyzed_at": "2026-07-13T19:44:35.852121+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -13,9 +13,9 @@
       {
         "ip": "104.16.9.34",
         "port": 0,
-        "result": "0",
+        "result": "",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
@@ -23,39 +23,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.7.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.11.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.2.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
@@ -63,39 +31,23 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.2.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.5.34",
+        "ip": "104.16.7.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
@@ -103,7 +55,55 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
         "from_package": false
       },
       {
