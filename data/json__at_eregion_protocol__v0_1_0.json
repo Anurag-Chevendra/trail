@@ -1,7 +1,7 @@
 {
   "package": "@eregion/protocol",
   "registry_version": "0.1.0",
-  "analyzed_at": "2026-07-13T14:48:52.682898+00:00",
+  "analyzed_at": "2026-07-13T19:45:13.393779+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -11,27 +11,11 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.6.34",
+        "ip": "104.16.8.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.2.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.11.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -39,7 +23,23 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
         "from_package": false
       },
       {
@@ -47,7 +47,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -55,15 +55,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.9.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -71,7 +63,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -79,7 +71,23 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "17",
         "from_package": false
       },
       {
@@ -87,15 +95,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
@@ -103,11 +103,11 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "17",
         "from_package": false
       },
       {
-        "ip": "104.16.6.34",
+        "ip": "104.16.8.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -115,7 +115,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.6.34",
+        "ip": "104.16.8.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -123,7 +123,7 @@
         "from_package": false
       },
       {
-        "ip": "104.16.6.34",
+        "ip": "104.16.8.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -176,8 +176,6 @@
     "executed_by_package": [],
     "all_reads": [
       "/etc/gai.conf",
-      "/etc/host.conf",
-      "/etc/hosts",
       "/etc/ld.so.cache",
       "/etc/localtime",
       "/etc/nsswitch.conf",
