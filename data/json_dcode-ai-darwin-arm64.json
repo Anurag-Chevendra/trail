@@ -1,6 +1,0 @@
-{
-  "package": "dcode-ai-darwin-arm64",
-  "status": "not_found",
-  "error": "registry error: <urlopen error [Errno -3] Temporary failure in name resolution>",
-  "registry_version": null
-}
