@@ -1,7 +1,7 @@
 {
   "package": "hexabot-action-ai-coding-agent",
   "registry_version": "3.0.1",
-  "analyzed_at": "2026-07-13T14:47:23.020277+00:00",
+  "analyzed_at": "2026-07-13T19:43:51.639187+00:00",
   "status": "timeout",
   "install_returncode": -1,
   "overall_verdict": "INCONCLUSIVE",
@@ -11,67 +11,19 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.6.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.1.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.7.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.11.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.5.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "16",
-        "from_package": false
-      },
-      {
         "ip": "104.16.9.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.8.34",
+        "ip": "104.16.10.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
@@ -79,15 +31,23 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.10.34",
+        "ip": "104.16.6.34",
         "port": 0,
-        "result": "",
+        "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
         "from_package": false
       },
       {
@@ -95,7 +55,7 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
@@ -103,19 +63,51 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "16",
+        "pid": "15",
         "from_package": false
       },
       {
-        "ip": "104.16.4.34",
-        "port": 443,
-        "result": "-1 EINPROGRESS",
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
         "blocked": false,
-        "pid": "8",
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
         "from_package": false
       },
       {
         "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "15",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
         "port": 443,
         "result": "-1 EINPROGRESS",
         "blocked": false,
@@ -169,7 +161,6 @@
     "all_reads": [
       "/etc/gai.conf",
       "/etc/host.conf",
-      "/etc/hosts",
       "/etc/ld.so.cache",
       "/etc/localtime",
       "/etc/nsswitch.conf",
