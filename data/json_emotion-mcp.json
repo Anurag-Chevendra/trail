@@ -1,0 +1,9 @@
+{
+  "package": "emotion-mcp",
+  "status": "error",
+  "overall_verdict": "ERROR",
+  "analysis_complete": false,
+  "error": "no trace produced",
+  "install_returncode": 0,
+  "install_stderr": "npm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\n\n[sandbox] trace copy failed: Error: \"/traceout/trace_emotion-mcp.log\" could not be found on container analyze-cc654c16: no such file or directory"
+}
