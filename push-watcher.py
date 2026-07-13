@@ -25,7 +25,10 @@ def load_packages(repo):
     if not pkg_file.exists():
         return []
     try:
-        return json.loads(pkg_file.read_text())
+        data = json.loads(pkg_file.read_text())
+        if isinstance(data, list):
+            return [r for r in data if isinstance(r, dict)]
+        return []
     except (json.JSONDecodeError, OSError):
         log(f"WARNING: corrupt {PACKAGES_FILE}, starting fresh")
         return []
@@ -77,9 +80,21 @@ def process_batch(results_dir, repo):
         except json.JSONDecodeError:
             log(f"Skipping (bad JSON, will retry): {f.name}")
             continue
-        packages = upsert(packages, record)
-        processed.append(f)
-        log(f"Merged: {f.name} ({record.get('package', '?')})")
+
+        # Handle both single objects and arrays of objects
+        if isinstance(record, list):
+            for item in record:
+                if isinstance(item, dict):
+                    packages = upsert(packages, item)
+            processed.append(f)
+            log(f"Merged: {f.name} ({len(record)} records)")
+        elif isinstance(record, dict):
+            packages = upsert(packages, record)
+            processed.append(f)
+            log(f"Merged: {f.name} ({record.get('package', '?')})")
+        else:
+            log(f"Skipping (not a dict or list): {f.name}")
+            continue
 
     if not processed:
         return
