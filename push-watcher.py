@@ -1,48 +1,123 @@
-#!/bin/bash
-# ─────────────────────────────────────────────────────────────
-# push-to-github.sh — Bundles analyzer results into packages.json
-# and pushes to your GitHub Pages repo.
-#
-# Setup:
-#   1. Clone your repo:
-#      git clone https://<TOKEN>@github.com/<USER>/trail-site.git /home/feet/trail-site
-#
-#   2. Edit the two paths below.
-#
-#   3. Add to crontab (e.g. every 10 minutes):
-#      crontab -e
-#      */10 * * * * /home/feet/trail-site/push-to-github.sh >> /home/feet/trail-site/push.log 2>&1
-# ─────────────────────────────────────────────────────────────
+#!/usr/bin/env python3
+import argparse
+import json
+import subprocess
+import time
+import sys
+from pathlib import Path
+from datetime import datetime
 
-# ── CONFIG ───────────────────────────────────────────────────
-RESULTS_DIR="/home/feet/Desktop/checker/results"
-REPO_DIR="/home/feet/trail-site"
-# ─────────────────────────────────────────────────────────────
+RESULTS_DIR = Path("/home/feet/Desktop/checker/results")
+REPO_DIR = Path("/home/feet/Desktop/www/trail")
+POLL_INTERVAL = 15
+PACKAGES_FILE = "packages.json"
 
-set -e
-cd "$REPO_DIR"
+def log(msg):
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
-# Combine all .json result files into a single JSON array
-# Uses a simple node one-liner (already on Pi if you run the analyzer)
-node -e "
-  const fs = require('fs');
-  const dir = process.argv[1];
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
-  const data = files.map(f => {
-    try { return JSON.parse(fs.readFileSync(dir + '/' + f, 'utf8')); }
-    catch { return null; }
-  }).filter(Boolean);
-  fs.writeFileSync('packages.json', JSON.stringify(data));
-" "$RESULTS_DIR"
+def git(repo, *args):
+    return subprocess.run(
+        ["git", *args], cwd=repo, capture_output=True, text=True, timeout=60
+    )
 
-# Only push if something actually changed
-if git diff --quiet packages.json 2>/dev/null; then
-  echo "[$(date)] No changes to push."
-  exit 0
-fi
+def load_packages(repo):
+    pkg_file = repo / PACKAGES_FILE
+    if not pkg_file.exists():
+        return []
+    try:
+        return json.loads(pkg_file.read_text())
+    except (json.JSONDecodeError, OSError):
+        log(f"WARNING: corrupt {PACKAGES_FILE}, starting fresh")
+        return []
 
-git add packages.json
-git commit -m "update packages $(date +%Y-%m-%dT%H:%M:%S)"
-git push
+def upsert(packages, record):
+    key = (record.get("package", ""), record.get("registry_version", ""))
+    for i, p in enumerate(packages):
+        if (p.get("package", ""), p.get("registry_version", "")) == key:
+            packages[i] = record
+            return packages
+    packages.append(record)
+    return packages
 
-echo "[$(date)] Pushed $(wc -c < packages.json) bytes."
+def save_packages(repo, packages):
+    (repo / PACKAGES_FILE).write_text(json.dumps(packages))
+
+def push(repo, names):
+    git(repo, "add", PACKAGES_FILE)
+    label = ", ".join(names[:5])
+    if len(names) > 5:
+        label += f" +{len(names) - 5} more"
+    msg = f"add {label}"
+
+    result = git(repo, "commit", "-m", msg)
+    if result.returncode != 0:
+        if "nothing to commit" in result.stdout:
+            return
+        log(f"git commit failed: {result.stderr.strip()}")
+        return
+
+    result = git(repo, "push")
+    if result.returncode != 0:
+        log(f"git push failed: {result.stderr.strip()}")
+        git(repo, "reset", "HEAD~1")
+        raise RuntimeError("push failed")
+    log(f"Pushed: {msg}")
+
+def process_batch(results_dir, repo):
+    json_files = sorted(results_dir.glob("*.json"))
+    if not json_files:
+        return
+
+    packages = load_packages(repo)
+    processed = []
+
+    for f in json_files:
+        try:
+            record = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            log(f"Skipping (bad JSON, will retry): {f.name}")
+            continue
+        packages = upsert(packages, record)
+        processed.append(f)
+        log(f"Merged: {f.name} ({record.get('package', '?')})")
+
+    if not processed:
+        return
+
+    save_packages(repo, packages)
+    names = [f.name for f in processed]
+    push(repo, names)
+
+    for f in processed:
+        f.unlink()
+        log(f"Deleted: {f.name}")
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--results", type=Path, default=RESULTS_DIR)
+    parser.add_argument("--repo", type=Path, default=REPO_DIR)
+    parser.add_argument("--interval", type=int, default=POLL_INTERVAL)
+    args = parser.parse_args()
+
+    if not args.results.is_dir():
+        sys.exit(f"Results directory not found: {args.results}")
+    if not (args.repo / ".git").is_dir():
+        sys.exit(f"Not a git repo: {args.repo}")
+
+    log(f"Watching: {args.results}")
+    log(f"Repo:     {args.repo}")
+    log(f"Interval: {args.interval}s")
+
+    git(args.repo, "pull", "--ff-only")
+
+    while True:
+        try:
+            process_batch(args.results, args.repo)
+        except RuntimeError as e:
+            log(f"Error (will retry): {e}")
+        except Exception as e:
+            log(f"Unexpected error: {e}")
+        time.sleep(args.interval)
+
+if __name__ == "__main__":
+    main()
