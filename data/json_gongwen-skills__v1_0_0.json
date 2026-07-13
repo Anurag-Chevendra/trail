@@ -1,7 +1,7 @@
 {
   "package": "gongwen-skills",
   "registry_version": "1.0.0",
-  "analyzed_at": "2026-07-13T10:51:03.646232+00:00",
+  "analyzed_at": "2026-07-13T11:18:32.100337+00:00",
   "status": "ok",
   "install_returncode": 0,
   "overall_verdict": "CLEAN",
@@ -10,91 +10,11 @@
     "package_connections": [],
     "all_public_connections": [
       {
-        "ip": "104.16.11.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.1.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.3.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
         "ip": "104.16.9.34",
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.4.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.6.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.2.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.10.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.5.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.0.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
-        "from_package": false
-      },
-      {
-        "ip": "104.16.8.34",
-        "port": 0,
-        "result": "0",
-        "blocked": false,
-        "pid": "27",
+        "pid": "30",
         "from_package": false
       },
       {
@@ -102,7 +22,103 @@
         "port": 0,
         "result": "0",
         "blocked": false,
-        "pid": "27",
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "30",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "20",
         "from_package": false
       }
     ],
