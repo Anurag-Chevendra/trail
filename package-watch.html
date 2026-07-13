@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Package Watch &mdash; Malware Analysis Feed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1116;
+    --panel:#161b23;
+    --panel-2:#1c2330;
+    --line:#28303d;
+    --hover-line:#3a4657;
+    --text:#e8ecf2;
+    --muted:#8b96a5;
+    --review:#ff4d4d;
+    --clean:#4cd6a4;
+    --accent:#6ea8fe;
+    --mono:'JetBrains Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
+    --sans:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+  }
+  /* Paper -- light theme */
+  body[data-theme="paper"]{
+    --bg:#f6f7f9; --panel:#ffffff; --panel-2:#f1f3f6;
+    --line:#e3e7ec; --hover-line:#c3ccd8;
+    --text:#1d2430; --muted:#69758a;
+    --review:#d92d3f; --clean:#0f9d6c;
+    --accent:#2563eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;
+    transition:background .25s, color .25s}
+
+  header{
+    border-bottom:1px solid var(--line);
+    padding:20px 32px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  header h1{font-size:19px;font-weight:650;letter-spacing:.2px;font-family:var(--display)}
+  .last-updated{font-size:12px;color:var(--muted);margin-left:8px}
+  @media (prefers-reduced-motion:reduce){
+    .card{animation:none !important}
+  }
+
+  .toolbar{
+    padding:20px 32px 4px;
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    justify-content:center;
+  }
+  .search{
+    flex:1;min-width:260px;max-width:520px;position:relative;
+  }
+  .search input{
+    width:100%;padding:10px 14px 10px 38px;
+    background:var(--panel);border:1px solid var(--line);border-radius:8px;
+    color:var(--text);font-size:14px;font-family:var(--mono);
+    outline:none;transition:border-color .15s;
+  }
+  .search input:focus{border-color:var(--accent)}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5;stroke:var(--text)}
+  .themes{margin-left:auto;display:flex;gap:8px;align-items:center}
+  .themes .label{color:var(--muted);font-size:12px;margin-right:2px}
+  .swatch{
+    width:26px;height:26px;border-radius:50%;cursor:pointer;
+    border:2px solid var(--line);padding:0;transition:transform .15s, border-color .15s;
+  }
+  .swatch:hover{transform:scale(1.12)}
+  .swatch.active{border-color:var(--accent)}
+  .swatch[data-t="graphite"]{background:linear-gradient(135deg,#0e1116 50%,#6ea8fe 50%)}
+  .swatch[data-t="paper"]{background:linear-gradient(135deg,#ffffff 50%,#2563eb 50%)}
+  .filters{display:flex;gap:8px}
+  .chip{
+    padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+    background:var(--panel);color:var(--muted);font-size:13px;cursor:pointer;
+    transition:all .15s;
+  }
+  .chip:hover{border-color:var(--muted)}
+  .chip.active{color:var(--text);border-color:currentColor}
+  .chip.active[data-v="REVIEW"]{color:var(--review)}
+  .chip.active[data-v="CLEAN"]{color:var(--clean)}
+  .count{padding:8px 32px 0;color:var(--muted);font-size:13px;text-align:center}
+
+  .grid{
+    padding:16px 32px 48px;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:16px;
+  }
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:16px 18px 14px 18px;position:relative;overflow:hidden;
+    cursor:pointer;transition:border-color .15s, transform .15s;
+    animation:drop .35s ease both;
+  }
+  @keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .card:hover{border-color:var(--hover-line);transform:translateY(-2px)}
+  .card .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .eco{font-size:11px;letter-spacing:1.2px;color:var(--muted);font-weight:600}
+  .verdict{
+    font-size:11px;font-weight:700;letter-spacing:.6px;
+    padding:3px 10px;border-radius:999px;border:1px solid;
+  }
+  .v-REVIEW .verdict{color:var(--review);border-color:var(--review);background:rgba(255,180,84,.08)}
+  .v-CLEAN .verdict{color:var(--clean);border-color:var(--clean);background:rgba(76,214,164,.08)}
+
+  .pkg{font-family:var(--mono);font-size:16px;font-weight:600;margin:10px 0 2px;word-break:break-all}
+  .ver{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+  .meta{margin-top:12px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+  .flags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+  .flag{
+    font-size:11px;font-family:var(--mono);padding:2px 8px;border-radius:5px;
+    background:var(--panel-2);color:var(--muted);border:1px solid var(--line);
+  }
+  .flag.warn{color:var(--review);border-color:rgba(255,180,84,.35)}
+
+  .detail{
+    max-height:0;overflow:hidden;transition:max-height .25s ease;
+  }
+  .card.open .detail{max-height:400px;overflow:auto}
+  .kv-wrap{
+    margin-top:12px;padding:12px 14px;background:var(--panel-2);
+    border:1px solid var(--line);border-radius:12px;
+    display:flex;flex-direction:column;gap:9px;
+  }
+  .kv{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:baseline}
+  .kv-label{color:var(--muted);font-size:12px}
+  .kv-val{font-family:var(--mono);font-size:12px;word-break:break-all}
+  .kv-val.warn{color:var(--review)}
+  .kv-none{color:var(--muted)}
+  .empty{padding:60px 32px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Package Watch</h1>
+  <span class="last-updated" id="lastUpdated"></span>
+  <div class="themes" id="themes">
+    <span class="label">Theme</span>
+    <button class="swatch active" data-t="graphite" title="Graphite"></button>
+    <button class="swatch" data-t="paper" title="Paper"></button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+    <input id="q" type="search" placeholder="Search package name or version&hellip;" autocomplete="off">
+  </div>
+  <div class="filters" id="filters">
+    <button class="chip active" data-v="ALL">All</button>
+    <button class="chip" data-v="REVIEW">Review</button>
+    <button class="chip" data-v="CLEAN">Clean</button>
+  </div>
+</div>
+<div class="count" id="count"></div>
+
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty" hidden>No packages match your search.</div>
+
+<script>
+/* -------------------------------------------------------------
+   STATIC MODE — GitHub Pages
+   Fetches packages.json (pushed by Pi) instead of a live server.
+   Re-fetches every 5 minutes to pick up new pushes.
+--------------------------------------------------------------*/
+
+let packages = [];
+
+function fmtItem(x){
+  if (x == null) return "-";
+  if (typeof x !== "object") return String(x);
+  if (x.path) return x.path + (x.found === false ? " (absent)" : "");
+  if (x.made_executable) return x.made_executable;
+  if (x.bin)  return x.bin;
+  if (x.ip)   return x.ip + (x.port ? ":" + x.port : "");
+  return JSON.stringify(x);
+}
+
+function isReview(section){
+  return ((section || {}).verdict || "").toLowerCase() === "review";
+}
+
+function findingsFor(p){
+  if (normVerdict(p.overall_verdict) === "CLEAN") return [];
+  const out = [];
+  const net = p.network || {}, can = p.canaries || {}, fs = p.filesystem || {};
+
+  if (isReview(net)){
+    const rows = [];
+    if ((net.package_connections || []).length)
+      rows.push({ label:"Package connections", items: net.package_connections });
+    if ((net.dns_lookups_non_npm || []).length)
+      rows.push({ label:"Non-registry DNS", items: net.dns_lookups_non_npm });
+    out.push({ tag:"network", warn:true, rows });
+  }
+  if (isReview(can)){
+    const rows = [];
+    if ((can.sensitive_file_access || []).length)
+      rows.push({ label:"Sensitive file access", items: can.sensitive_file_access });
+    out.push({ tag:"recon", warn:true, rows });
+  }
+  if (isReview(fs)){
+    const rows = [];
+    if ((fs.package_files_read || []).length)
+      rows.push({ label:"Files read", items: fs.package_files_read });
+    if ((fs.package_files_written || []).length)
+      rows.push({ label:"Files written", items: fs.package_files_written });
+    if ((fs.downloaded_artifacts || []).length)
+      rows.push({ label:"Downloaded artifacts", items: fs.downloaded_artifacts });
+    if ((fs.executed_by_package || []).length)
+      rows.push({ label:"Executed by package", items: fs.executed_by_package });
+    out.push({ tag:"fs", warn:false, rows });
+  }
+  return out;
+}
+
+function detailRows(p){
+  const verdict = normVerdict(p.overall_verdict);
+  let html = `<div class="kv"><div class="kv-label">Overall verdict</div>` +
+             `<div><span class="kv-val">${verdict}</span></div></div>`;
+  for (const section of findingsFor(p)){
+    for (const row of section.rows){
+      const chips = row.items.map(x =>
+        `<span class="flag${section.warn ? " warn" : ""}">${escapeHtml(fmtItem(x))}</span>`).join(" ");
+      html += `<div class="kv"><div class="kv-label">${escapeHtml(row.label)}</div><div>${chips}</div></div>`;
+    }
+  }
+  return html;
+}
+
+/* -- STATIC MODE ----------------------------------------------
+   Fetches packages.json from the same directory (relative URL).
+   Cache-busts with a timestamp query param so GitHub Pages CDN
+   serves the latest version after a push.
+--------------------------------------------------------------*/
+
+async function fetchPackages(){
+  try {
+    const r = await fetch("packages.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    packages = await r.json();
+    document.getElementById("lastUpdated").textContent =
+      "Updated " + new Date().toLocaleTimeString();
+    render();
+  } catch (e) {
+    console.error("Failed to fetch packages.json:", e);
+    if (packages.length === 0) {
+      document.getElementById("empty").hidden = false;
+      document.getElementById("empty").textContent =
+        "Could not load packages.json — waiting for data…";
+    }
+  }
+}
+
+/* -------------------------------------------------------------
+   UI STATE + RENDERING
+--------------------------------------------------------------*/
+let query = "";
+let verdictFilter = "ALL";
+
+const grid  = document.getElementById("grid");
+const empty = document.getElementById("empty");
+const count = document.getElementById("count");
+
+function timeAgo(iso){
+  const t = new Date(iso).getTime();
+  if (!iso || isNaN(t)) return "unknown";
+  const s = (Date.now() - t) / 1000;
+  if (s < 60)    return "just now";
+  if (s < 3600)  return Math.floor(s/60) + " min ago";
+  if (s < 86400) return Math.floor(s/3600) + " hours ago";
+  return Math.floor(s/86400) + " days ago";
+}
+
+function normVerdict(v){
+  return (v || "").toUpperCase() === "CLEAN" ? "CLEAN" : "REVIEW";
+}
+
+function flagsFor(p){
+  return findingsFor(p).map(s => ({ t: s.tag, warn: s.warn }));
+}
+
+function render(){
+  const sorted = [...packages].sort(
+    (a,b) => new Date(b.analyzed_at) - new Date(a.analyzed_at)
+  );
+
+  const q = query.trim().toLowerCase();
+  const visible = sorted.filter(p => {
+    const v = normVerdict(p.overall_verdict);
+    if (verdictFilter !== "ALL" && v !== verdictFilter) return false;
+    if (!q) return true;
+    return (p.package || "").toLowerCase().includes(q)
+        || (p.registry_version || "").toLowerCase().includes(q);
+  });
+
+  count.textContent = visible.length + " of " + packages.length + " packages";
+  empty.hidden = visible.length > 0;
+  if (!empty.hidden && packages.length > 0)
+    empty.textContent = "No packages match your search.";
+  grid.innerHTML = "";
+
+  for (const p of visible){
+    const v = normVerdict(p.overall_verdict);
+    const card = document.createElement("div");
+    card.className = "card v-" + v;
+    const flags = flagsFor(p).map(f =>
+      `<span class="flag${f.warn ? " warn" : ""}">${f.t}</span>`).join("");
+    card.innerHTML = `
+      <div class="row">
+        <span class="eco">${p.ecosystem || "NPM"}</span>
+        <span class="verdict">${v}</span>
+      </div>
+      <div class="pkg">${escapeHtml(p.package || "(unknown package)")}</div>
+      ${p.registry_version ? `<div class="ver">v${escapeHtml(String(p.registry_version))}</div>` : ""}
+      ${flags ? `<div class="flags">${flags}</div>` : ""}
+      <div class="meta">
+        <span>Analyzed ${timeAgo(p.analyzed_at)}</span>
+        <span>&#9656; details</span>
+      </div>
+      <div class="detail"><div class="kv-wrap">${detailRows(p)}</div></div>
+    `;
+    card.addEventListener("click", () => card.classList.toggle("open"));
+    grid.appendChild(card);
+  }
+}
+
+function escapeHtml(s){
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+document.getElementById("themes").addEventListener("click", e => {
+  const s = e.target.closest(".swatch"); if (!s) return;
+  document.querySelectorAll(".swatch").forEach(x => x.classList.remove("active"));
+  s.classList.add("active");
+  const t = s.dataset.t;
+  if (t === "graphite") document.body.removeAttribute("data-theme");
+  else document.body.setAttribute("data-theme", t);
+});
+
+document.getElementById("q").addEventListener("input", e => {
+  query = e.target.value; render();
+});
+document.getElementById("filters").addEventListener("click", e => {
+  const btn = e.target.closest(".chip"); if (!btn) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+  btn.classList.add("active");
+  verdictFilter = btn.dataset.v; render();
+});
+
+/* -- Boot: fetch once now, then every 5 minutes -- */
+fetchPackages();
+setInterval(fetchPackages, 5 * 60 * 1000);
+</script>
+</body>
+</html>
