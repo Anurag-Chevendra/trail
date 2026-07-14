@@ -3449,5 +3449,306 @@
     "file": "results/json_at_liangzhixin_canvas-office-word-engine__v0_1_0.json",
     "published_at": "2026-07-14T08:04:32.168Z",
     "finished_at": 1784024045.8665366
+  },
+  {
+    "package": "optimize-regex",
+    "verdict": "REVIEW",
+    "file": "results/json_optimize-regex__v1_2_1.json",
+    "published_at": null,
+    "finished_at": 1784027006.5976532
+  },
+  {
+    "package": "no-for-of-loops",
+    "verdict": "REVIEW",
+    "file": "results/json_no-for-of-loops__v1_0_1.json",
+    "published_at": null,
+    "finished_at": 1784027006.6152558
+  },
+  {
+    "package": "outer-package",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_outer-package.json",
+    "published_at": null,
+    "finished_at": 1784027006.9742177
+  },
+  {
+    "package": "outer-23453",
+    "verdict": "CLEAN",
+    "file": "results/json_outer-23453__v1_0_1.json",
+    "published_at": null,
+    "finished_at": 1784027018.5438664
+  },
+  {
+    "package": "rallycoding",
+    "verdict": "REVIEW",
+    "file": "results/json_rallycoding__v3_2_0.json",
+    "published_at": null,
+    "finished_at": 1784027056.2993455
+  },
+  {
+    "package": "win-env-setup",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_win-env-setup.json",
+    "published_at": null,
+    "finished_at": 1784027056.682569
+  },
+  {
+    "package": "@xyraadelunar/baileys",
+    "verdict": "REVIEW",
+    "file": "results/json_at_xyraadelunar_baileys__v1_0_1.json",
+    "published_at": null,
+    "finished_at": 1784027086.8676014
+  },
+  {
+    "package": "@plumeria/inspector",
+    "verdict": "CLEAN",
+    "file": "results/json_at_plumeria_inspector__v16_2_4.json",
+    "published_at": null,
+    "finished_at": 1784027109.3224561
+  },
+  {
+    "package": "n8n-nodes-actual",
+    "verdict": "CLEAN",
+    "file": "results/json_n8n-nodes-actual__v26_7_15.json",
+    "published_at": null,
+    "finished_at": 1784027163.0864637
+  },
+  {
+    "package": "bot-signal",
+    "verdict": "CLEAN",
+    "file": "results/json_bot-signal__v2_0_3.json",
+    "published_at": null,
+    "finished_at": 1784027263.8656445
+  },
+  {
+    "package": "@sprint-logger/web",
+    "verdict": "CLEAN",
+    "file": "results/json_at_sprint-logger_web__v0_1_1.json",
+    "published_at": null,
+    "finished_at": 1784027299.4253385
+  },
+  {
+    "package": "detect-disposable-email",
+    "verdict": "CLEAN",
+    "file": "results/json_detect-disposable-email__v1_1_1.json",
+    "published_at": null,
+    "finished_at": 1784027323.2704272
+  },
+  {
+    "package": "whatsapp-data-sdk",
+    "verdict": "CLEAN",
+    "file": "results/json_whatsapp-data-sdk__v1_3_1.json",
+    "published_at": null,
+    "finished_at": 1784027339.1569304
+  },
+  {
+    "package": "@hcsinternal/react-navigation",
+    "verdict": "CLEAN",
+    "file": "results/json_at_hcsinternal_react-navigation__v1_0_0.json",
+    "published_at": null,
+    "finished_at": 1784027415.078688
+  },
+  {
+    "package": "@trading-gateway/mcp",
+    "verdict": "REVIEW",
+    "file": "results/json_at_trading-gateway_mcp__v0_2_0-alpha_10.json",
+    "published_at": null,
+    "finished_at": 1784027448.847222
+  },
+  {
+    "package": "@fatihkan/badi",
+    "verdict": "CLEAN",
+    "file": "results/json_at_fatihkan_badi__v1_36_0.json",
+    "published_at": null,
+    "finished_at": 1784027471.271688
+  },
+  {
+    "package": "armanage-platform-mcp",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_armanage-platform-mcp.json",
+    "published_at": null,
+    "finished_at": 1784027471.6457534
+  },
+  {
+    "package": "@pantas-net/joi",
+    "verdict": "CLEAN",
+    "file": "results/json_at_pantas-net_joi__v18_2_3.json",
+    "published_at": null,
+    "finished_at": 1784027472.315182
+  },
+  {
+    "package": "@kivia/sdk",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kivia_sdk__v0_1_6.json",
+    "published_at": null,
+    "finished_at": 1784027487.9598851
+  },
+  {
+    "package": "playlist-data-engine",
+    "verdict": "INCONCLUSIVE",
+    "file": "results/json_playlist-data-engine__v1_6_0.json",
+    "published_at": null,
+    "finished_at": 1784027799.9819908
+  },
+  {
+    "package": "@beiguancyc/parse-server",
+    "verdict": "INCONCLUSIVE",
+    "file": "results/json_at_beiguancyc_parse-server__v9_10_0-ruixiang_1.json",
+    "published_at": null,
+    "finished_at": 1784027802.3577142
+  },
+  {
+    "package": "gptcore",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_gptcore.json",
+    "published_at": null,
+    "finished_at": 1784027802.8315704
+  },
+  {
+    "package": "yukistage",
+    "verdict": "REVIEW",
+    "file": "results/json_yukistage__v1_1_6.json",
+    "published_at": null,
+    "finished_at": 1784027881.5898514
+  },
+  {
+    "package": "bailcin",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_bailcin.json",
+    "published_at": null,
+    "finished_at": 1784027882.0264544
+  },
+  {
+    "package": "@pontasockets/cheerio",
+    "verdict": "CLEAN",
+    "file": "results/json_at_pontasockets_cheerio__v1_0_0.json",
+    "published_at": null,
+    "finished_at": 1784027922.595933
+  },
+  {
+    "package": "@cubee_ee/sdk",
+    "verdict": "REVIEW",
+    "file": "results/json_at_cubee_ee_sdk__v0_5_0.json",
+    "published_at": null,
+    "finished_at": 1784028128.2450316
+  },
+  {
+    "package": "agent-finance-cli",
+    "verdict": "CLEAN",
+    "file": "results/json_agent-finance-cli__v0_6_1.json",
+    "published_at": null,
+    "finished_at": 1784028173.5739834
+  },
+  {
+    "package": "rabitwallet",
+    "verdict": "REVIEW",
+    "file": "results/json_rabitwallet__v0_1_2.json",
+    "published_at": null,
+    "finished_at": 1784028271.6927981
+  },
+  {
+    "package": "zero-baileys",
+    "verdict": "CLEAN",
+    "file": "results/json_zero-baileys__v2_5_5.json",
+    "published_at": null,
+    "finished_at": 1784028307.8722842
+  },
+  {
+    "package": "@kenectai/core",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_core__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028350.9464421
+  },
+  {
+    "package": "@kenectai/engine",
+    "verdict": "REVIEW",
+    "file": "results/json_at_kenectai_engine__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028566.4416633
+  },
+  {
+    "package": "@kenectai/producer",
+    "verdict": "REVIEW",
+    "file": "results/json_at_kenectai_producer__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028618.3015144
+  },
+  {
+    "package": "@kenectai/player",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_player__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028707.5544956
+  },
+  {
+    "package": "@kenectai/gcp-cloud-run",
+    "verdict": "REVIEW",
+    "file": "results/json_at_kenectai_gcp-cloud-run__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028908.8659441
+  },
+  {
+    "package": "@kenectai/shader-transitions",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_shader-transitions__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028949.2323372
+  },
+  {
+    "package": "@kenectai/parsers",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_parsers__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784028998.522204
+  },
+  {
+    "package": "@kenectai/aws-lambda",
+    "verdict": "INCONCLUSIVE",
+    "file": "results/json_at_kenectai_aws-lambda__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784029032.4915462
+  },
+  {
+    "package": "@kenectai/sdk",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_sdk__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784029072.65176
+  },
+  {
+    "package": "@kenectai/studio-server",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_studio-server__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784029099.753803
+  },
+  {
+    "package": "@kenectai/lint",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_lint__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784029145.8539107
+  },
+  {
+    "package": "@fictjs/webpack-plugin",
+    "verdict": "CLEAN",
+    "file": "results/json_at_fictjs_webpack-plugin__v0_28_0.json",
+    "published_at": null,
+    "finished_at": 1784029242.1513755
+  },
+  {
+    "package": "@antisoft/figma-make-bb-canary",
+    "verdict": "CLEAN",
+    "file": "results/json_at_antisoft_figma-make-bb-canary__v0_0_1.json",
+    "published_at": null,
+    "finished_at": 1784029256.5357406
+  },
+  {
+    "package": "@kenectai/studio",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kenectai_studio__v0_7_55.json",
+    "published_at": null,
+    "finished_at": 1784029330.924423
   }
 ]
