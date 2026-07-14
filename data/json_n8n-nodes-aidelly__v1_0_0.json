@@ -1,0 +1,711 @@
+{
+  "package": "n8n-nodes-aidelly",
+  "registry_version": "1.0.0",
+  "analyzed_at": "2026-07-14T04:56:34.602597+00:00",
+  "status": "timeout",
+  "install_returncode": -1,
+  "overall_verdict": "REVIEW",
+  "analysis_complete": false,
+  "network": {
+    "attribution": "pid_subtree",
+    "package_connections": [
+      {
+        "ip": "104.16.213.131",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "53",
+        "from_package": true
+      }
+    ],
+    "all_public_connections": [
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.213.131",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "61",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.212.131",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "61",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.213.131",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "53",
+        "from_package": true
+      }
+    ],
+    "dns_lookups_all": [
+      "nodejs.org",
+      "registry.npmjs.org"
+    ],
+    "dns_lookups_non_npm": [],
+    "npm_hostnames_seen": [
+      "nodejs.org",
+      "registry.npmjs.org"
+    ],
+    "exfil_services_contacted": [],
+    "verdict": "review"
+  },
+  "canaries": {
+    "attribution": "pid_subtree",
+    "canary_tokens_leaked": [],
+    "canary_token_count": 0,
+    "sensitive_file_access": [
+      {
+        "path": "/test/.npmrc",
+        "found": false,
+        "error": "ENOENT",
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/root/.npmrc",
+        "found": true,
+        "error": null,
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/etc/passwd",
+        "found": true,
+        "error": null,
+        "read_by": "package",
+        "benign_npm_read": false
+      }
+    ],
+    "accessed_by_package": [
+      "/etc/passwd"
+    ],
+    "probed_but_absent": [],
+    "verdict": "review"
+  },
+  "filesystem": {
+    "attribution": "pid_subtree",
+    "package_files_read": [
+      "/etc/gai.conf",
+      "/etc/host.conf",
+      "/etc/hosts",
+      "/etc/ld.so.cache",
+      "/etc/localtime",
+      "/etc/nsswitch.conf",
+      "/etc/passwd",
+      "/etc/resolv.conf",
+      "/lib64/ld-linux-x86-64.so.2",
+      "/tmp/cc5B2tJ4.o",
+      "/tmp/ccBxEQZe.s",
+      "/tmp/ccLml4tU.s",
+      "/tmp/ccNRxaRn.o",
+      "/usr/include/dlfcn.h",
+      "/usr/include/elf.h",
+      "/usr/include/features-time64.h",
+      "/usr/include/features.h",
+      "/usr/include/stdc-predef.h",
+      "/usr/include/stdint.h",
+      "/usr/include/x86_64-linux-gnu/bits/auxv.h",
+      "/usr/include/x86_64-linux-gnu/bits/dlfcn.h",
+      "/usr/include/x86_64-linux-gnu/bits/hwcap.h",
+      "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h",
+      "/usr/include/x86_64-linux-gnu/bits/long-double.h",
+      "/usr/include/x86_64-linux-gnu/bits/stdint-intn.h",
+      "/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h",
+      "/usr/include/x86_64-linux-gnu/bits/time64.h",
+      "/usr/include/x86_64-linux-gnu/bits/timesize.h",
+      "/usr/include/x86_64-linux-gnu/bits/types.h",
+      "/usr/include/x86_64-linux-gnu/bits/typesizes.h",
+      "/usr/include/x86_64-linux-gnu/bits/wchar.h",
+      "/usr/include/x86_64-linux-gnu/bits/wordsize.h",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/libc.so",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/libgcc_s.so.1",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/libgcc.a",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/libgcc_s.so",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so",
+      "/usr/lib/locale/C.utf8/LC_CTYPE",
+      "/usr/lib/python3.11",
+      "/usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings",
+      "/usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc",
+      "/usr/lib/python3.11/lib-dynload",
+      "/usr/lib/python3/dist-packages",
+      "/usr/local/bin/node",
+      "/usr/local/lib/python3.11/dist-packages"
+    ],
+    "package_files_written": [
+      "/tmp/cc5B2tJ4.o",
+      "/tmp/cc7DLM7L.res",
+      "/tmp/ccBxEQZe.s",
+      "/tmp/ccG7dKFV.cdtor.o",
+      "/tmp/ccLml4tU.s",
+      "/tmp/ccNRxaRn.o",
+      "/tmp/ccPyX4hJ.cdtor.o",
+      "/tmp/ccekpIHY.res",
+      "/tmp/ccrX9p8c.cdtor.c",
+      "/tmp/ccrawos7.cdtor.c",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/node_api.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/aix.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/bsd.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/errno.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/os390.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/posix.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/sunos.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/threadpool.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/tree.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/unix.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/uv/win.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/v8-debug.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/v8-local-handle.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/v8-platform.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/v8-script.h",
+      "/tmp/node-gyp-tmp-bWvEca/include/node/v8-value.h",
+      "buildcheck.gypi"
+    ],
+    "tmp_snooped": [],
+    "recon_dir_scan": false,
+    "recon_dirs_enumerated": [],
+    "downloaded_artifacts": [],
+    "executed_by_package": [
+      {
+        "bin": "/usr/local/sbin/cc",
+        "pid": "40"
+      },
+      {
+        "bin": "/usr/local/bin/cc",
+        "pid": "40"
+      },
+      {
+        "bin": "/usr/sbin/cc",
+        "pid": "40"
+      },
+      {
+        "bin": "/usr/bin/cc",
+        "pid": "40"
+      },
+      {
+        "bin": "/usr/lib/gcc/x86_64-linux-gnu/12/cc1",
+        "pid": "41"
+      },
+      {
+        "bin": "/usr/local/sbin/cc",
+        "pid": "42"
+      },
+      {
+        "bin": "/usr/local/bin/cc",
+        "pid": "42"
+      },
+      {
+        "bin": "/usr/sbin/cc",
+        "pid": "42"
+      },
+      {
+        "bin": "/usr/bin/cc",
+        "pid": "42"
+      },
+      {
+        "bin": "/usr/lib/gcc/x86_64-linux-gnu/12/cc1",
+        "pid": "43"
+      },
+      {
+        "bin": "/usr/local/sbin/as",
+        "pid": "44"
+      },
+      {
+        "bin": "/usr/local/bin/as",
+        "pid": "44"
+      },
+      {
+        "bin": "/usr/sbin/as",
+        "pid": "44"
+      },
+      {
+        "bin": "/usr/bin/as",
+        "pid": "44"
+      },
+      {
+        "bin": "/usr/lib/gcc/x86_64-linux-gnu/12/collect2",
+        "pid": "45"
+      },
+      {
+        "bin": "/usr/bin/ld",
+        "pid": "46"
+      },
+      {
+        "bin": "/usr/local/sbin/cc",
+        "pid": "47"
+      },
+      {
+        "bin": "/usr/local/bin/cc",
+        "pid": "47"
+      },
+      {
+        "bin": "/usr/sbin/cc",
+        "pid": "47"
+      },
+      {
+        "bin": "/usr/bin/cc",
+        "pid": "47"
+      },
+      {
+        "bin": "/usr/lib/gcc/x86_64-linux-gnu/12/cc1",
+        "pid": "48"
+      },
+      {
+        "bin": "/usr/local/sbin/as",
+        "pid": "49"
+      },
+      {
+        "bin": "/usr/local/bin/as",
+        "pid": "49"
+      },
+      {
+        "bin": "/usr/sbin/as",
+        "pid": "49"
+      },
+      {
+        "bin": "/usr/bin/as",
+        "pid": "49"
+      },
+      {
+        "bin": "/usr/lib/gcc/x86_64-linux-gnu/12/collect2",
+        "pid": "50"
+      },
+      {
+        "bin": "/usr/bin/ld",
+        "pid": "51"
+      },
+      {
+        "bin": "/usr/local/sbin/python3",
+        "pid": "64"
+      },
+      {
+        "bin": "/usr/local/bin/python3",
+        "pid": "64"
+      },
+      {
+        "bin": "/usr/sbin/python3",
+        "pid": "64"
+      },
+      {
+        "bin": "/usr/bin/python3",
+        "pid": "64"
+      },
+      {
+        "bin": "/usr/bin/python3",
+        "pid": "65"
+      }
+    ],
+    "all_reads": [
+      "/etc/gai.conf",
+      "/etc/host.conf",
+      "/etc/hosts",
+      "/etc/ld.so.cache",
+      "/etc/localtime",
+      "/etc/nsswitch.conf",
+      "/etc/passwd",
+      "/etc/resolv.conf",
+      "/lib64/ld-linux-x86-64.so.2",
+      "/root/.gitconfig",
+      "/root/.npmrc",
+      "/test/package.json",
+      "/tmp/cc5B2tJ4.o",
+      "/tmp/ccBxEQZe.s",
+      "/tmp/ccLml4tU.s",
+      "/tmp/ccNRxaRn.o",
+      "/usr/bin/ldd",
+      "/usr/include/dlfcn.h",
+      "/usr/include/elf.h",
+      "/usr/include/features-time64.h",
+      "/usr/include/features.h",
+      "/usr/include/stdc-predef.h",
+      "/usr/include/stdint.h",
+      "/usr/include/x86_64-linux-gnu/bits/auxv.h",
+      "/usr/include/x86_64-linux-gnu/bits/dlfcn.h",
+      "/usr/include/x86_64-linux-gnu/bits/hwcap.h",
+      "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h",
+      "/usr/include/x86_64-linux-gnu/bits/long-double.h",
+      "/usr/include/x86_64-linux-gnu/bits/stdint-intn.h",
+      "/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h",
+      "/usr/include/x86_64-linux-gnu/bits/time64.h",
+      "/usr/include/x86_64-linux-gnu/bits/timesize.h",
+      "/usr/include/x86_64-linux-gnu/bits/types.h",
+      "/usr/include/x86_64-linux-gnu/bits/typesizes.h",
+      "/usr/include/x86_64-linux-gnu/bits/wchar.h",
+      "/usr/include/x86_64-linux-gnu/bits/wordsize.h",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/libc.so",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/libgcc_s.so.1",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/libgcc.a",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/libgcc_s.so",
+      "/usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so",
+      "/usr/lib/locale/C.utf8/LC_CTYPE",
+      "/usr/lib/python3.11",
+      "/usr/lib/python3.11/__pycache__/sitecustomize.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings",
+      "/usr/lib/python3.11/encodings/__pycache__/__init__.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings/__pycache__/aliases.cpython-311.pyc",
+      "/usr/lib/python3.11/encodings/__pycache__/utf_8.cpython-311.pyc",
+      "/usr/lib/python3.11/lib-dynload",
+      "/usr/lib/python3/dist-packages",
+      "/usr/local/bin/node",
+      "/usr/local/lib/python3.11/dist-packages"
+    ],
+    "verdict": "review"
+  },
+  "install_stderr_tail": "TIMEOUT: install exceeded INSTALL_TIMEOUT"
+}
