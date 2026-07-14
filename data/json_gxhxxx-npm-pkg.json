@@ -1,0 +1,8 @@
+{
+  "package": "gxhxxx-npm-pkg",
+  "status": "not_found",
+  "overall_verdict": "NOT_FOUND",
+  "analysis_complete": false,
+  "error": "registry error: <urlopen error [Errno -3] Temporary failure in name resolution>",
+  "registry_version": null
+}

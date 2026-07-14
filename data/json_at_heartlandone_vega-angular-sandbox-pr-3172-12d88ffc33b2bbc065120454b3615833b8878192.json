@@ -1,0 +1,8 @@
+{
+  "package": "@heartlandone/vega-angular-sandbox-pr-3172-12d88ffc33b2bbc065120454b3615833b8878192",
+  "status": "not_found",
+  "overall_verdict": "NOT_FOUND",
+  "analysis_complete": false,
+  "error": "registry error: <urlopen error [Errno -3] Temporary failure in name resolution>",
+  "registry_version": null
+}
