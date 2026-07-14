@@ -2763,5 +2763,131 @@
     "file": "results/json_at_kryptosai_veros-core.json",
     "published_at": "2026-07-14T03:34:47.323Z",
     "finished_at": 1784012916.8662088
+  },
+  {
+    "package": "@avee1234/provenant",
+    "verdict": "CLEAN",
+    "file": "results/json_at_avee1234_provenant__v0_1_0.json",
+    "published_at": "2026-07-14T03:39:39.244Z",
+    "finished_at": 1784013041.3365052
+  },
+  {
+    "package": "@avee1234/handover",
+    "verdict": "CLEAN",
+    "file": "results/json_at_avee1234_handover__v0_1_0.json",
+    "published_at": "2026-07-14T03:39:55.045Z",
+    "finished_at": 1784013061.9645407
+  },
+  {
+    "package": "turbulencejs",
+    "verdict": "CLEAN",
+    "file": "results/json_turbulencejs__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:05.440Z",
+    "finished_at": 1784013086.6319032
+  },
+  {
+    "package": "@avee1234/capgrant",
+    "verdict": "CLEAN",
+    "file": "results/json_at_avee1234_capgrant__v0_1_0.json",
+    "published_at": "2026-07-14T03:40:09.606Z",
+    "finished_at": 1784013112.6186047
+  },
+  {
+    "package": "makwo-cli",
+    "verdict": "CLEAN",
+    "file": "results/json_makwo-cli__v1_0_1.json",
+    "published_at": "2026-07-14T03:36:52.043Z",
+    "finished_at": 1784013117.0358393
+  },
+  {
+    "package": "@web-clone/core",
+    "verdict": "CLEAN",
+    "file": "results/json_at_web-clone_core__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:18.064Z",
+    "finished_at": 1784013133.4317653
+  },
+  {
+    "package": "@web-clone/adapter-common",
+    "verdict": "CLEAN",
+    "file": "results/json_at_web-clone_adapter-common__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:36.183Z",
+    "finished_at": 1784013138.7140412
+  },
+  {
+    "package": "@web-clone/codegen",
+    "verdict": "CLEAN",
+    "file": "results/json_at_web-clone_codegen__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:45.384Z",
+    "finished_at": 1784013156.8237836
+  },
+  {
+    "package": "multitodo",
+    "verdict": "CLEAN",
+    "file": "results/json_multitodo__v1_0_0.json",
+    "published_at": "2026-07-14T03:31:06.472Z",
+    "finished_at": 1784013170.4763386
+  },
+  {
+    "package": "@web-clone/adapter-playwright",
+    "verdict": "CLEAN",
+    "file": "results/json_at_web-clone_adapter-playwright__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:51.966Z",
+    "finished_at": 1784013181.0127208
+  },
+  {
+    "package": "@web-clone/adapter-puppeteer",
+    "verdict": "CLEAN",
+    "file": "results/json_at_web-clone_adapter-puppeteer__v1_0_0.json",
+    "published_at": "2026-07-14T03:40:59.319Z",
+    "finished_at": 1784013184.7531142
+  },
+  {
+    "package": "open-platform-ts",
+    "verdict": "CLEAN",
+    "file": "results/json_open-platform-ts__v0_0_0.json",
+    "published_at": "2026-07-14T03:41:05.881Z",
+    "finished_at": 1784013192.5704787
+  },
+  {
+    "package": "deserved",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_deserved.json",
+    "published_at": "2026-07-14T03:42:35.185Z",
+    "finished_at": 1784013192.9202397
+  },
+  {
+    "package": "@kofoworola/trace-viewer",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kofoworola_trace-viewer__v0_1_0.json",
+    "published_at": "2026-07-14T03:43:12.000Z",
+    "finished_at": 1784013316.8991637
+  },
+  {
+    "package": "template-waas",
+    "verdict": "UNPUBLISHED",
+    "file": "results/json_template-waas.json",
+    "published_at": "2026-07-14T03:35:31.312Z",
+    "finished_at": 1784013319.0020053
+  },
+  {
+    "package": "eslint-plugin-sv-remote",
+    "verdict": "CLEAN",
+    "file": "results/json_eslint-plugin-sv-remote__v0_1_0.json",
+    "published_at": "2026-07-14T03:41:52.232Z",
+    "finished_at": 1784013325.2837687
+  },
+  {
+    "package": "tokenmaxxingman",
+    "verdict": "CLEAN",
+    "file": "results/json_tokenmaxxingman__v0_0_21.json",
+    "published_at": "2026-07-14T03:35:46.173Z",
+    "finished_at": 1784013367.7522216
+  },
+  {
+    "package": "@kkkqkx123/web-clone-cli",
+    "verdict": "CLEAN",
+    "file": "results/json_at_kkkqkx123_web-clone-cli__v1_0_0.json",
+    "published_at": "2026-07-14T03:45:45.926Z",
+    "finished_at": 1784013382.8157494
   }
 ]
