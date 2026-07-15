@@ -1,0 +1,75 @@
+# .github/workflows/pages.yml
+name: build-and-deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # lets you redeploy by hand from the Actions tab
+
+permissions:
+  contents: read            # read the repo; cannot write commits back
+  pages: write              # publish to Pages
+  id-token: write           # OIDC proof for deploy-pages
+
+concurrency:
+  group: pages
+  cancel-in-progress: true  # newest push always wins the race
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build _site
+        run: |
+          mkdir -p _site
+          cp index.html about.html _site/     # about.html is required; fail loudly if missing
+          cp CNAME _site/ 2>/dev/null || true # keep the custom domain if present
+          python3 - <<'EOF'
+          import json, glob, os, time, hashlib
+
+          SKIP = {"summary.json"}   # checker's own index, not a package record
+          recs, skipped = {}, 0
+
+          for p in sorted(glob.glob("data/*.json")):
+              name = os.path.basename(p)
+              if name in SKIP:
+                  continue
+              try:
+                  d = json.load(open(p))
+              except Exception as e:
+                  print(f"::warning::unparseable {name}: {e}"); skipped += 1; continue
+              if not isinstance(d, dict):
+                  print(f"::warning::not an object: {name}"); skipped += 1; continue
+              if not d.get("package") or "overall_verdict" not in d:
+                  print(f"::warning::malformed {name}"); skipped += 1; continue
+              recs[name] = d
+
+          if not recs:
+              raise SystemExit("::error::no records bundled - refusing to deploy an empty site")
+
+          blob = json.dumps(recs, separators=(",", ":"))
+          open("_site/bundle.json", "w").write(blob)
+          json.dump(
+              {"v": hashlib.sha256(blob.encode()).hexdigest()[:12],
+               "n": len(recs),
+               "t": int(time.time())},
+              open("_site/version.json", "w"),
+          )
+          print(f"bundled {len(recs)} records ({len(blob):,} bytes), skipped {skipped}")
+          EOF
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
