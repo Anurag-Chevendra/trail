@@ -1,0 +1,996 @@
+{
+  "package": "bvm-core",
+  "registry_version": "1.1.43",
+  "analyzed_at": "2026-07-16T19:41:54.844379+00:00",
+  "status": "ok",
+  "install_returncode": 0,
+  "overall_verdict": "REVIEW",
+  "analysis_complete": true,
+  "network": {
+    "attribution": "pid_subtree",
+    "package_connections": [
+      {
+        "ip": "43.109.164.214",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "30",
+        "from_package": true
+      },
+      {
+        "ip": "129.227.198.153",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "32",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "34",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "36",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "48",
+        "from_package": true
+      }
+    ],
+    "all_public_connections": [
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "",
+        "blocked": false,
+        "pid": "16",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "8",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.214",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.215",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.216",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.217",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.218",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.219",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.220",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.221",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "31",
+        "from_package": false
+      },
+      {
+        "ip": "43.109.164.214",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "30",
+        "from_package": true
+      },
+      {
+        "ip": "129.227.198.153",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "33",
+        "from_package": false
+      },
+      {
+        "ip": "129.227.213.131",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "33",
+        "from_package": false
+      },
+      {
+        "ip": "129.227.198.158",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "33",
+        "from_package": false
+      },
+      {
+        "ip": "129.227.198.155",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "33",
+        "from_package": false
+      },
+      {
+        "ip": "129.227.198.159",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "33",
+        "from_package": false
+      },
+      {
+        "ip": "129.227.198.153",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "32",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "35",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "34",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 0,
+        "result": "0",
+        "blocked": false,
+        "pid": "45",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "36",
+        "from_package": true
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.1.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.3.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.5.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.0.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.10.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.4.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.8.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.11.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.7.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.6.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.9.34",
+        "port": 443,
+        "result": "0",
+        "blocked": false,
+        "pid": "49",
+        "from_package": false
+      },
+      {
+        "ip": "104.16.2.34",
+        "port": 443,
+        "result": "-1 EINPROGRESS",
+        "blocked": false,
+        "pid": "48",
+        "from_package": true
+      }
+    ],
+    "dns_lookups_all": [
+      "mirrors.cloud.tencent.com",
+      "registry.npmjs.org"
+    ],
+    "dns_lookups_non_npm": [
+      "mirrors.cloud.tencent.com"
+    ],
+    "npm_hostnames_seen": [
+      "registry.npmjs.org"
+    ],
+    "exfil_services_contacted": [],
+    "verdict": "review"
+  },
+  "canaries": {
+    "attribution": "pid_subtree",
+    "canary_tokens_leaked": [],
+    "canary_token_count": 0,
+    "sensitive_file_access": [
+      {
+        "path": "/test/.npmrc",
+        "found": false,
+        "error": "ENOENT",
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/root/.npmrc",
+        "found": true,
+        "error": null,
+        "read_by": "npm",
+        "benign_npm_read": true
+      },
+      {
+        "path": "/etc/passwd",
+        "found": true,
+        "error": null,
+        "read_by": "package",
+        "benign_npm_read": false
+      },
+      {
+        "path": "/root/.npmrc",
+        "found": true,
+        "error": null,
+        "read_by": "package",
+        "benign_npm_read": false
+      }
+    ],
+    "accessed_by_package": [
+      "/etc/passwd",
+      "/root/.npmrc"
+    ],
+    "probed_but_absent": [],
+    "verdict": "review"
+  },
+  "filesystem": {
+    "attribution": "pid_subtree",
+    "package_files_read": [
+      "/",
+      "/etc/gai.conf",
+      "/etc/host.conf",
+      "/etc/hosts",
+      "/etc/ld.so.cache",
+      "/etc/localtime",
+      "/etc/nsswitch.conf",
+      "/etc/passwd",
+      "/etc/resolv.conf",
+      "/root/",
+      "/root/.bashrc",
+      "/root/.bvm/",
+      "/root/.bvm/aliases/default",
+      "/root/.bvm/bin/bvm",
+      "/root/.bvm/current",
+      "/root/.bvm/shims",
+      "/root/.bvm/shims/bun",
+      "/root/.bvm/shims/bunx",
+      "/root/.bvm/src",
+      "/root/.bvm/src/index.js",
+      "/root/.bvm/versions/v1.3.14/bin",
+      "/root/.gitconfig",
+      "/root/.npmrc",
+      "/test/",
+      "/test/package.json",
+      "/tmp/bvm-bun-1784230896882.tgz",
+      "/tmp/bvm-ext-1784230906248",
+      "/tmp/bvm-ext-1784230906248/package",
+      "/tmp/bvm-ext-1784230906248/package/bin",
+      "/tmp/bvm-ext-1784230906248/package/bin/bun",
+      "/usr/bin/which",
+      "/usr/lib/ssl/openssl.cnf",
+      "/usr/local/bin/node",
+      "package.json"
+    ],
+    "package_files_written": [
+      "/root/.bashrc",
+      "/root/.bvm/aliases/default",
+      "/root/.bvm/bin/bvm",
+      "/root/.bvm/bin/bvm-init.fish",
+      "/root/.bvm/bin/bvm-init.sh",
+      "/root/.bvm/bin/bvm-shim.js",
+      "/root/.bvm/bin/bvm-shim.sh",
+      "/root/.bvm/runtime/v1.3.14/bin/bun",
+      "/root/.bvm/runtime/v1.3.14/bunfig.toml",
+      "/root/.bvm/shims/bun",
+      "/root/.bvm/shims/bunx",
+      "/root/.bvm/src/index.js",
+      "/tmp/bvm-bun-1784230896882.tgz",
+      "package/README.md",
+      "package/bin/bun"
+    ],
+    "tmp_snooped": [
+      "/root/",
+      "/root/.bvm/",
+      "/root/.bvm/current",
+      "/root/.bvm/shims",
+      "/root/.bvm/src",
+      "/root/.bvm/versions/v1.3.14/bin",
+      "/root/.gitconfig",
+      "/root/.npmrc",
+      "/tmp/bvm-ext-1784230906248",
+      "/tmp/bvm-ext-1784230906248/package",
+      "/tmp/bvm-ext-1784230906248/package/bin",
+      "/tmp/bvm-ext-1784230906248/package/bin/bun"
+    ],
+    "recon_dir_scan": true,
+    "recon_dirs_enumerated": [
+      "/tmp/bvm-ext-1784230906248",
+      "/tmp/bvm-ext-1784230906248/package",
+      "/tmp/bvm-ext-1784230906248/package/bin"
+    ],
+    "downloaded_artifacts": [
+      {
+        "path": "/root/.bvm/bin/bvm-shim.sh",
+        "pid": "21",
+        "likely_source": [
+          "mirrors.cloud.tencent.com"
+        ],
+        "executed": true
+      },
+      {
+        "path": "/tmp/bvm-bun-1784230896882.tgz",
+        "pid": "48",
+        "likely_source": [
+          "mirrors.cloud.tencent.com"
+        ],
+        "executed": false
+      },
+      {
+        "path": "/root/.bvm/bin/bvm-shim.sh",
+        "pid": "53",
+        "likely_source": [
+          "mirrors.cloud.tencent.com"
+        ],
+        "executed": true
+      },
+      {
+        "path": "/root/.bvm/bin/bvm-init.sh",
+        "pid": "53",
+        "likely_source": [
+          "mirrors.cloud.tencent.com"
+        ],
+        "executed": true
+      }
+    ],
+    "executed_by_package": [
+      {
+        "bin": "/usr/local/sbin/which",
+        "pid": "28"
+      },
+      {
+        "bin": "/usr/local/bin/which",
+        "pid": "28"
+      },
+      {
+        "bin": "/usr/sbin/which",
+        "pid": "28"
+      },
+      {
+        "bin": "/usr/bin/which",
+        "pid": "28"
+      },
+      {
+        "bin": "/usr/local/sbin/cat",
+        "pid": "29"
+      },
+      {
+        "bin": "/usr/local/bin/cat",
+        "pid": "29"
+      },
+      {
+        "bin": "/usr/sbin/cat",
+        "pid": "29"
+      },
+      {
+        "bin": "/usr/bin/cat",
+        "pid": "29"
+      },
+      {
+        "bin": "/usr/local/sbin/curl",
+        "pid": "30"
+      },
+      {
+        "bin": "/usr/local/bin/curl",
+        "pid": "30"
+      },
+      {
+        "bin": "/usr/sbin/curl",
+        "pid": "30"
+      },
+      {
+        "bin": "/usr/bin/curl",
+        "pid": "30"
+      },
+      {
+        "bin": "/usr/local/sbin/curl",
+        "pid": "32"
+      },
+      {
+        "bin": "/usr/local/bin/curl",
+        "pid": "32"
+      },
+      {
+        "bin": "/usr/sbin/curl",
+        "pid": "32"
+      },
+      {
+        "bin": "/usr/bin/curl",
+        "pid": "32"
+      },
+      {
+        "bin": "/usr/local/sbin/curl",
+        "pid": "34"
+      },
+      {
+        "bin": "/usr/local/bin/curl",
+        "pid": "34"
+      },
+      {
+        "bin": "/usr/sbin/curl",
+        "pid": "34"
+      },
+      {
+        "bin": "/usr/bin/curl",
+        "pid": "34"
+      },
+      {
+        "bin": "/usr/local/sbin/curl",
+        "pid": "48"
+      },
+      {
+        "bin": "/usr/local/bin/curl",
+        "pid": "48"
+      },
+      {
+        "bin": "/usr/sbin/curl",
+        "pid": "48"
+      },
+      {
+        "bin": "/usr/bin/curl",
+        "pid": "48"
+      },
+      {
+        "bin": "/usr/local/sbin/tar",
+        "pid": "50"
+      },
+      {
+        "bin": "/usr/local/bin/tar",
+        "pid": "50"
+      },
+      {
+        "bin": "/usr/sbin/tar",
+        "pid": "50"
+      },
+      {
+        "bin": "/usr/bin/tar",
+        "pid": "50"
+      },
+      {
+        "bin": "/usr/local/sbin/gzip",
+        "pid": "51"
+      },
+      {
+        "bin": "/usr/local/bin/gzip",
+        "pid": "51"
+      },
+      {
+        "bin": "/usr/sbin/gzip",
+        "pid": "51"
+      },
+      {
+        "bin": "/usr/bin/gzip",
+        "pid": "51"
+      },
+      {
+        "bin": "/root/.bvm/runtime/v1.3.14/bin/bun",
+        "pid": "52"
+      },
+      {
+        "made_executable": "/root/.bvm/bin/bvm",
+        "pid": "21"
+      },
+      {
+        "bin": "/root/.bvm/bin/bvm",
+        "pid": "53"
+      },
+      {
+        "bin": "/root/.bvm/runtime/current/bin/bun",
+        "pid": "53"
+      },
+      {
+        "made_executable": "/root/.bvm/bin/bvm-shim.sh",
+        "pid": "60"
+      },
+      {
+        "made_executable": "/root/.bvm/bin/bvm",
+        "pid": "58"
+      },
+      {
+        "made_executable": "/root/.bvm/shims/bun",
+        "pid": "60"
+      },
+      {
+        "made_executable": "/root/.bvm/shims/bunx",
+        "pid": "58"
+      },
+      {
+        "made_executable": "/root/.bvm/bin/bvm-init.sh",
+        "pid": "58"
+      },
+      {
+        "made_executable": "/root/.bvm/bin/bvm-init.fish",
+        "pid": "60"
+      },
+      {
+        "bin": "/root/.bvm/bin/bvm",
+        "pid": "61"
+      },
+      {
+        "bin": "/root/.bvm/runtime/current/bin/bun",
+        "pid": "61"
+      },
+      {
+        "made_executable": "/root/.bvm/shims/bun",
+        "pid": "66"
+      },
+      {
+        "made_executable": "/root/.bvm/shims/bunx",
+        "pid": "67"
+      }
+    ],
+    "all_reads": [
+      "/",
+      "/etc/gai.conf",
+      "/etc/host.conf",
+      "/etc/hosts",
+      "/etc/ld.so.cache",
+      "/etc/localtime",
+      "/etc/nsswitch.conf",
+      "/etc/passwd",
+      "/etc/resolv.conf",
+      "/root/",
+      "/root/.bashrc",
+      "/root/.bvm/",
+      "/root/.bvm/aliases/default",
+      "/root/.bvm/bin/bvm",
+      "/root/.bvm/current",
+      "/root/.bvm/shims",
+      "/root/.bvm/shims/bun",
+      "/root/.bvm/shims/bunx",
+      "/root/.bvm/src",
+      "/root/.bvm/src/index.js",
+      "/root/.bvm/versions/v1.3.14/bin",
+      "/root/.gitconfig",
+      "/root/.npmrc",
+      "/test/",
+      "/test/package.json",
+      "/tmp/bvm-bun-1784230896882.tgz",
+      "/tmp/bvm-ext-1784230906248",
+      "/tmp/bvm-ext-1784230906248/package",
+      "/tmp/bvm-ext-1784230906248/package/bin",
+      "/tmp/bvm-ext-1784230906248/package/bin/bun",
+      "/usr/bin/ldd",
+      "/usr/bin/which",
+      "/usr/lib/ssl/openssl.cnf",
+      "/usr/local/bin/node",
+      "package.json"
+    ],
+    "verdict": "review"
+  },
+  "install_stderr_tail": "npm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\n"
+}
