@@ -19,6 +19,7 @@
     --amber:#5e5e5e;
     --mono:ui-monospace,'Cascadia Code','JetBrains Mono',Menlo,Consolas,monospace;
     --sans:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -35,13 +36,27 @@
   .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
   .brand h1{font-family:var(--mono);font-size:1.6rem;font-weight:600;letter-spacing:.02em}
   .brand .live{
+    display:inline-flex;align-items:center;gap:7px;
     font-family:var(--mono);font-size:.72rem;color:var(--dim);
-    border:1px solid var(--line);border-radius:999px;padding:3px 10px;
+    border:1px solid var(--line);border-radius:999px;padding:3px 12px 3px 9px;
   }
-  .brand .live::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
-    background:var(--clean);margin-right:7px;vertical-align:1px}
+  /* a run filling and resetting, rather than a status dot that means nothing */
+  .brand .live .ring{width:12px;height:12px;flex-shrink:0;transform:rotate(-90deg)}
+  .brand .live .ring circle{fill:none;stroke-width:2.5}
+  .brand .live .ring .track{stroke:var(--line)}
+  .brand .live .ring .sweep{
+    stroke:var(--clean);stroke-linecap:round;
+    stroke-dasharray:44;                  /* 2 * pi * r, r=7 */
+    animation:sweep 3s linear infinite;
+  }
+  @keyframes sweep{from{stroke-dashoffset:44}to{stroke-dashoffset:0}}
+  @media (prefers-reduced-motion:reduce){
+    .brand .live .ring .sweep{animation:none;stroke-dashoffset:11}
+  }
   .tagline{margin-top:14px;font-size:1.28rem;line-height:1.5;color:var(--text);max-width:44ch}
   .tagline em{font-style:normal;color:var(--dim)}
+  .note{margin-top:14px;font-size:.92rem;line-height:1.55;color:var(--dim);max-width:100ch}
+  .note b{color:var(--text);font-weight:600}
 
   /* the signature: one trace line becoming a verdict */
   .trace{
@@ -71,7 +86,7 @@
   /* body sections */
   section{padding:52px 0 0}
   h2{
-    font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(grey);
+    font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--text);
     letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;
   }
   p{margin-bottom:16px;color:var(--text)}
@@ -116,6 +131,33 @@
   .verdicts .row p{margin:0;font-size:.95rem;color:var(--dim)}
   .verdicts .pill{flex-shrink:0;min-width:104px;text-align:center}
   .pill.inc{color:var(--amber);border:1px solid var(--amber)}
+  /* branch labels are names, not verdicts - deliberately neutral so they
+     don't read as a fourth verdict alongside REVIEW / CLEAN / INCONCLUSIVE */
+  .pill.branch{color:var(--dim);border:1px solid var(--line);background:var(--panel-2)}
+
+  /* engine: spec-sheet, not prose */
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+  .branch{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;
+  }
+  .branch-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+  .branch-state{
+    font-family:var(--mono);font-size:.64rem;color:var(--faint);
+    letter-spacing:.09em;text-transform:uppercase;
+  }
+  .branch b{display:block;font-size:.95rem;font-weight:600;margin-bottom:3px}
+  .branch .desc{color:var(--dim);font-size:.89rem;line-height:1.5}
+  @media(max-width:520px){.branches{grid-template-columns:1fr}}
+
+  /* contact: the quietest thing on the page, not the loudest */
+  .mail{
+    font-family:var(--mono);font-size:1.08rem;color:var(--text);
+    border-bottom:1px solid transparent;transition:border-color .15s;
+  }
+  .mail:hover,.mail:focus-visible{
+    border-bottom-color:var(--text);text-decoration:none;
+  }
 
   /* footer */
   footer{
@@ -140,12 +182,19 @@
   <header>
     <div class="brand">
       <h1>Trail</h1>
+      <span class="live">
+        <svg class="ring" viewBox="0 0 20 20" aria-hidden="true">
+          <circle class="track" cx="10" cy="10" r="7"/>
+          <circle class="sweep" cx="10" cy="10" r="7"/>
+        </svg>
+        ~30s to a verdict
+      </span>
     </div>
     <p class="tagline">
       Suspicious npm packages, installed in a disposable sandbox and watched at the
       syscall level. <em>Not what the code says it does but rather what it actually did.</em>
     </p>
-
+    
     <figure class="trace" aria-label="Example of a trace line leading to a review verdict">
       <div class="trace-bar">
         <span>install trace · excerpt</span>
@@ -159,6 +208,7 @@
         2 signals from package-owned processes <span class="arrow">→</span> <span class="pill review">REVIEW</span>
       </div>
     </figure>
+    
   </header>
 
   <section>
@@ -168,7 +218,9 @@
       installed inside a fresh, throwaway container while every file access, network
       connection, and spawned process is recorded. The trace is then parsed and each
       action is attributed to the process that made it, so the package's own behavior
-      is separated from the normal noise of an <code>npm install</code>.
+      is separated from the normal noise of an <code>npm install</code>. Anomalous behavior surfaces in about 30 seconds on average.</b> Any lag you see
+      on the feed is queue time, not analysis time. Throughput is currently limited by
+      available RAM.
     </p>
     <p class="dim">
       It is a triage tool, not a malware classifier. Its job is to surface behavior
@@ -207,21 +259,56 @@
   <section>
     <h2>Reading the feed</h2>
     <div class="verdicts">
-      <div class="row"><span class="pill review">REVIEW</span><p>Something in the trace warrants a human look. Not a conviction , a lead.</p></div>
+      <div class="row"><span class="pill review">REVIEW</span><p>Something in the trace warrants a human look. Not a conviction, a lead.</p></div>
       <div class="row"><span class="pill clean">CLEAN</span><p>Nothing notable observed during install. Behavior outside the install window is out of scope.</p></div>
       <div class="row"><span class="pill inc">INCONCLUSIVE</span><p>The install stalled or was cut short, so a clean-looking trace can't be trusted.</p></div>
     </div>
     <p class="dim" style="margin-top:18px">
-      Packages already pulled by the registry (unpublished, security holdings) are
-      recorded as such and kept for the timeline.
+      If the registry pulls a package while it is being analyzed, it drops off the feed
+      entirely. Security holdings are the exception: npm replaces the real version with a
+      <code>0.0.1-security</code> placeholder, so there is nothing left to install and
+      nothing to trace. Those stay, filed under review and marked as placeholders.
     </p>
   </section>
 
+  <section>
+    <h2>Engine</h2>
+    <p class="dim">
+      A sandbox is table stakes. The open problem is detection strategy, and it is
+      worked on across two branches in parallel.
+    </p>
+    <div class="branches">
+      <div class="branch">
+        <div class="branch-head">
+          <span class="pill branch">Beta</span>
+          <span class="branch-state">feeds this page</span>
+        </div>
+        <b>Evasion resistance</b>
+        <span class="desc">Sandbox realism, against droppers that go quiet the moment they sense analysis.</span>
+      </div>
+      <div class="branch">
+        <div class="branch-head">
+          <span class="pill branch">Alpha</span>
+          <span class="branch-state">in development</span>
+        </div>
+        <b>Code coverage</b>
+        <span class="desc">Execution paths an install alone never reaches.</span>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <h2>Contact</h2>
+    <p class="dim">
+      Please reach out in case of a disputed verdict, a package worth a look or just to talk :) Cheers
+      
+    </p>
+    <a class="mail" href="mailto:contact@snappyfeet.org">contact@snappyfeet.org</a>
+  </section>
 
   <footer>
     <span>Trail · Behavioral Package Analysis</span>
-    <a href="https://trail.snappyfeet.org/">← back to the feed</a>
+    <a href="index.html">← back to the feed</a>
   </footer>
 
 </div>
